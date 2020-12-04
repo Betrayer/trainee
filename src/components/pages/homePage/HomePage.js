@@ -8,6 +8,7 @@ const HomePage = () => {
       <div className={css.homePageWrapper}>
         <h1>Homepage</h1>
         <h2>Seems like you succesfully ran this code</h2>
+        <input type="file"></input>
         <NavLink to="/template">to some other page</NavLink>
       </div>
     </>

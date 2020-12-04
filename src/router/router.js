@@ -22,6 +22,13 @@ const Lazy404 = lazy(
     ) /* webpackChunkName: '404' */
 );
 
+const LazyInput = lazy(
+  () =>
+    import(
+      "../components/pages/inputPage/InputPage"
+    )
+)
+
 export const useRouter = () => {
   return (
     <Suspense
@@ -34,6 +41,7 @@ export const useRouter = () => {
       <Switch>
         <Route exact path="/" component={LazyHome} />
         <Route exact path="/template" component={LazyTemplate} />
+        <Route exact path="/input" component={LazyInput} />
         <Route exact path="*" component={Lazy404} />
       </Switch>
     </Suspense>
